@@ -1,5 +1,10 @@
 package com.hemebiotech.analytics;
 
+/**
+ * The main class
+ * @author Nathan D
+ * @version 1.0
+ */
 public class AnalyticsCounter {
 	/**
 	 *
@@ -8,7 +13,7 @@ public class AnalyticsCounter {
 	 */
 	public static void main(String args[]) throws Exception {
 		/**
-		 *
+		 * @see SymptomCount
 		 */
 		SymptomCount.symptomCount();
 

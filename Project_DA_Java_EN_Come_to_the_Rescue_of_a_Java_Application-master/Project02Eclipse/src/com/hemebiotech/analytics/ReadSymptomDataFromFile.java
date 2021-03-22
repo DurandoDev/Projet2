@@ -22,7 +22,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	public ReadSymptomDataFromFile (String filepath) {
 		this.filepath = filepath;
 	}
-	
+
+	/**
+	 *
+	 * @return result : a List of the symptoms in an alphabetic order
+	 */
 	@Override
 	public List<String> GetSymptoms() {
 		List result = new ArrayList();
