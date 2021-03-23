@@ -3,6 +3,9 @@ package com.hemebiotech.analytics;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Count the symptoms occurrence and place them into result.out
@@ -14,9 +17,11 @@ public class SymptomCount {
      */
     public static void symptomCount() throws IOException {
         int count;
+        String mapKey;
         ArrayList<String> alreadyCount = new ArrayList<>();
+        Map<String, Integer> symptomCount = new TreeMap<String,Integer>();
         /**
-         * Initialize the files needed
+         * Initialize the file where we're going to put our result data
          * @see FileWriter
          */
         FileWriter writer = new FileWriter ("result.out");
@@ -28,6 +33,10 @@ public class SymptomCount {
         ReadSymptomDataFromFile listSymptom = new ReadSymptomDataFromFile("symptoms.txt");
 
 
+
+
+
+
         for (int i=0;i<listSymptom.GetSymptoms().size();i++){
             /**
              * Verify if the symptom haven't been already check
@@ -37,6 +46,7 @@ public class SymptomCount {
                  * add the symptom if it's not check
                  */
                 alreadyCount.add(listSymptom.GetSymptoms().get(i));
+                mapKey = listSymptom.GetSymptoms().get(i);
 
                 count=0;
                 /**
@@ -47,8 +57,16 @@ public class SymptomCount {
                         count++;
                     }
                 }
-                writer.write(listSymptom.GetSymptoms().get(i)+": "+count + "\n");
+                symptomCount.put(mapKey, count);
             }
+        }
+        /**
+         * Write the keys and the values in result.out
+         */
+        for (Map.Entry<String,Integer> entry:symptomCount.entrySet()){
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            writer.write(key+": "+value+"\n");
         }
         writer.close();
     }
