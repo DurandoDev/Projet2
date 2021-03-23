@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3300947-c6bc-4fa7-8ba4-cbce61f0ba1b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project02Eclipse/com/hemebiotech/analytics/AnalyticsCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project02Eclipse/com/hemebiotech/analytics/AnalyticsCounter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project02Eclipse/com/hemebiotech/analytics/ReadSymptomDataFromFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project02Eclipse/com/hemebiotech/analytics/ReadSymptomDataFromFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project02Eclipse/com/hemebiotech/analytics/SymptomCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project02Eclipse/com/hemebiotech/analytics/SymptomCount.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.out" beforeDir="false" afterPath="$PROJECT_DIR$/result.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +87,7 @@
       <workItem from="1616416350098" duration="1893000" />
       <workItem from="1616420797011" duration="9007000" />
       <workItem from="1616489630003" duration="413000" />
+      <workItem from="1616493620984" duration="75000" />
     </task>
     <task id="LOCAL-00001" summary="Retrait du code inutile et meilleure initialisation de la variable count">
       <created>1616422506162</created>
