@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
 
 /**
  * Simple brute force implementation
@@ -13,7 +12,7 @@ import java.util.Collections;
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath;
+	private final String filepath;
 	
 	/**
 	 * 
@@ -25,11 +24,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	/**
 	 *
-	 * @return result : a List of the symptoms in an alphabetic order
+	 * @return result : an ArrayList of the symptoms
 	 */
 	@Override
 	public List<String> GetSymptoms() {
-		List result = new ArrayList();
+		ArrayList<String> result = new ArrayList<>();
 		
 		if (filepath != null) {
 			try {
@@ -45,7 +44,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				e.printStackTrace();
 			}
 		}
-		Collections.sort(result); //Alphabetic order of the list result
 		return result;
 	}
 
