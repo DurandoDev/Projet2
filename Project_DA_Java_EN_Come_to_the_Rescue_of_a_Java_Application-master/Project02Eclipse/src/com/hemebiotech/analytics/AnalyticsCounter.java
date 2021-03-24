@@ -15,7 +15,7 @@ public class AnalyticsCounter {
 		/**
 		 * @see SymptomCount
 		 */
-		SymptomCount.symptomCount();
+		SymptomCount.symptomCount("symptoms.txt","result.out");
 
 	}
 }

@@ -12,62 +12,65 @@ import java.util.TreeMap;
  */
 public class SymptomCount {
     /**
-     *Count the symptoms occurrence and place them into result.out
+     * Count the symptoms occurrence and place them into result.out
+     * @param source
+     * @param destination
      * @throws IOException
      */
-    public static void symptomCount() throws IOException {
-        int count;
-        String mapKey;
-        ArrayList<String> alreadyCount = new ArrayList<>();
-        Map<String, Integer> symptomCount = new TreeMap<String,Integer>();
-        /**
-         * Initialize the file where we're going to put our result data
-         * @see FileWriter
-         */
-        FileWriter writer = new FileWriter ("result.out");
-        /**
-         * Create a list from the file specified in parameter
-         *
-         * @see ReadSymptomDataFromFile
-         */
-        ReadSymptomDataFromFile listSymptom = new ReadSymptomDataFromFile("symptoms.txt");
+    public static void symptomCount(String source,String destination) throws IOException {
+        try{
+            int count;
+            String mapKey;
 
-
-
-
-
-
-        for (int i=0;i<listSymptom.GetSymptoms().size();i++){
+            ArrayList<String> alreadyCount = new ArrayList<>();
+            Map<String, Integer> symptomCount = new TreeMap<String,Integer>();
             /**
-             * Verify if the symptom haven't been already check
+             * Initialize the file where we're going to put our result data
+             * @see FileWriter
              */
-            if (!(alreadyCount.contains(listSymptom.GetSymptoms().get(i)))){
-                /**
-                 * add the symptom if it's not check
-                 */
-                alreadyCount.add(listSymptom.GetSymptoms().get(i));
-                mapKey = listSymptom.GetSymptoms().get(i);
+            FileWriter writer = new FileWriter (destination);
+            /**
+             * Create a list from the file specified in parameter
+             *
+             * @see ReadSymptomDataFromFile
+             */
+            ReadSymptomDataFromFile listSymptom = new ReadSymptomDataFromFile(source);
 
-                count=0;
+            for (int i=0;i<listSymptom.GetSymptoms().size();i++){
                 /**
-                 * Checking how many times the symptom is in the file
+                 * Verify if the symptom haven't been already check
                  */
-                for (int j=0;j<listSymptom.GetSymptoms().size();j++){
-                    if (listSymptom.GetSymptoms().get(j).equals(listSymptom.GetSymptoms().get(i))){
-                        count++;
+                if (!(alreadyCount.contains(listSymptom.GetSymptoms().get(i)))){
+                    /**
+                     * add the symptom if it's not check
+                     */
+                    alreadyCount.add(listSymptom.GetSymptoms().get(i));
+                    mapKey = listSymptom.GetSymptoms().get(i);
+
+                    count=0;
+                    /**
+                     * Checking how many times the symptom is in the file
+                     */
+                    for (int j=0;j<listSymptom.GetSymptoms().size();j++){
+                        if (listSymptom.GetSymptoms().get(j).equals(listSymptom.GetSymptoms().get(i))){
+                            count++;
+                        }
                     }
+                    symptomCount.put(mapKey, count);
                 }
-                symptomCount.put(mapKey, count);
             }
+            /**
+             * Write the keys and the values in result.out
+             */
+            for (Map.Entry<String,Integer> entry:symptomCount.entrySet()){
+                String key = entry.getKey();
+                Integer value = entry.getValue();
+                writer.write(key+": "+value+"\n");
+            }
+            writer.close();
+        }catch (IOException e){
+            e.printStackTrace();
         }
-        /**
-         * Write the keys and the values in result.out
-         */
-        for (Map.Entry<String,Integer> entry:symptomCount.entrySet()){
-            String key = entry.getKey();
-            Integer value = entry.getValue();
-            writer.write(key+": "+value+"\n");
-        }
-        writer.close();
+
     }
 }
