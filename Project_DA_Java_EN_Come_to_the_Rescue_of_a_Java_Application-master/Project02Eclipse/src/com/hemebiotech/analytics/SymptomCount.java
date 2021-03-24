@@ -3,7 +3,6 @@ package com.hemebiotech.analytics;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -13,43 +12,42 @@ import java.util.TreeMap;
 public class SymptomCount {
     /**
      * Count the symptoms occurrence and place them into result.out
-     * @param source
-     * @param destination
-     * @throws IOException
+     * @param source file to read
+     * @param destination file to write in
      */
-    public static void symptomCount(String source,String destination) throws IOException {
+    public static void symptomCount(String source,String destination) {
         try{
             int count;
             String mapKey;
 
             ArrayList<String> alreadyCount = new ArrayList<>();
-            Map<String, Integer> symptomCount = new TreeMap<String,Integer>();
-            /**
-             * Initialize the file where we're going to put our result data
-             * @see FileWriter
+            Map<String, Integer> symptomCount = new TreeMap<>();
+            /*
+              Initialize the file where we're going to put our result data
+              @see FileWriter
              */
             FileWriter writer = new FileWriter (destination);
-            /**
-             * Create a list from the file specified in parameter
-             *
-             * @see ReadSymptomDataFromFile
+            /*
+              Create a list from the file specified in parameter
+
+              @see ReadSymptomDataFromFile
              */
             ReadSymptomDataFromFile listSymptom = new ReadSymptomDataFromFile(source);
 
             for (int i=0;i<listSymptom.GetSymptoms().size();i++){
-                /**
-                 * Verify if the symptom haven't been already check
+                /*
+                  Verify if the symptom haven't been already check
                  */
                 if (!(alreadyCount.contains(listSymptom.GetSymptoms().get(i)))){
-                    /**
-                     * add the symptom if it's not check
+                    /*
+                      add the symptom if it's not check
                      */
                     alreadyCount.add(listSymptom.GetSymptoms().get(i));
                     mapKey = listSymptom.GetSymptoms().get(i);
 
                     count=0;
-                    /**
-                     * Checking how many times the symptom is in the file
+                    /*
+                      Checking how many times the symptom is in the file
                      */
                     for (int j=0;j<listSymptom.GetSymptoms().size();j++){
                         if (listSymptom.GetSymptoms().get(j).equals(listSymptom.GetSymptoms().get(i))){
@@ -59,8 +57,8 @@ public class SymptomCount {
                     symptomCount.put(mapKey, count);
                 }
             }
-            /**
-             * Write the keys and the values in result.out
+            /*
+              Write the keys and the values in result.out
              */
             for (Map.Entry<String,Integer> entry:symptomCount.entrySet()){
                 String key = entry.getKey();

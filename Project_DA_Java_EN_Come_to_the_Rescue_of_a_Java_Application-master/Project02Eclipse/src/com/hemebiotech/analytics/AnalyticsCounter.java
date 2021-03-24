@@ -8,12 +8,11 @@ package com.hemebiotech.analytics;
 public class AnalyticsCounter {
 	/**
 	 *
-	 * @param args
-	 * @throws Exception
+	 * @param args main method
 	 */
-	public static void main(String args[]) throws Exception {
-		/**
-		 * @see SymptomCount
+	public static void main(String[] args) {
+		/*
+		  @see SymptomCount
 		 */
 		SymptomCount.symptomCount("symptoms.txt","result.out");
 
