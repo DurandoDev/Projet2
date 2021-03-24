@@ -15,9 +15,9 @@ public class SymptomCount {
     public static void symptomCount() throws IOException {
         int count;
         ArrayList<String> alreadyCount = new ArrayList<>();
-        /**
-         * Initialize the files needed
-         * @see FileWriter
+        /*
+          Initialize the files needed
+          @see FileWriter
          */
         FileWriter writer = new FileWriter ("result.out");
         /**

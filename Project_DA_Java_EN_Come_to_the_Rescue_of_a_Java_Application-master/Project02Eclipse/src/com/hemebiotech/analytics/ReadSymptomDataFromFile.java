@@ -13,7 +13,7 @@ import java.util.Collections;
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath;
+	private final String filepath;
 	
 	/**
 	 * 
@@ -29,7 +29,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 */
 	@Override
 	public List<String> GetSymptoms() {
-		List result = new ArrayList();
+		List<String> result = new ArrayList<>();
 		
 		if (filepath != null) {
 			try {
