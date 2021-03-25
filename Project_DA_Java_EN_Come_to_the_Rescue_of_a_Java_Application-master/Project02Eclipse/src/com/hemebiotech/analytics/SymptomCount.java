@@ -15,6 +15,23 @@ public class SymptomCount {
      * @param source file to read
      * @param destination file to write in
      */
+<<<<<<< HEAD
+    public static void symptomCount() throws IOException {
+        int count;
+        ArrayList<String> alreadyCount = new ArrayList<>();
+        /*
+          Initialize the files needed
+          @see FileWriter
+         */
+        FileWriter writer = new FileWriter ("result.out");
+        /**
+         * Create a list from the file specified in parameter
+         *
+         * @see ReadSymptomDataFromFile
+         */
+        ReadSymptomDataFromFile listSymptom = new ReadSymptomDataFromFile("symptoms.txt");
+
+=======
     public static void symptomCount(String source,String destination) {
         try{
             int count;
@@ -27,6 +44,7 @@ public class SymptomCount {
             FileWriter writer = new FileWriter (destination);
             /*
               Create a list from the file specified in parameter
+>>>>>>> develop
 
               @see ReadSymptomDataFromFile
              */

@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <list default="true" id="c0d1f56f-c7e0-43bf-bf89-414f49e0684c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_03_2021_10_06__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_03_2021_10_06__Default_Changelist_.xml" afterDir="false" />
+=======
+    <list default="true" id="f3300947-c6bc-4fa7-8ba4-cbce61f0ba1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> develop
+    </list>
+=======
     <list default="true" id="f3300947-c6bc-4fa7-8ba4-cbce61f0ba1b" name="Default Changelist" comment="Ajout des fichiers xml" />
+>>>>>>> develop
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1q9ZeZrNiVPUkoSvXiTf2WK6IDk" />
+=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -32,6 +49,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1pyiYVN0Cdxptqc97LpbkjSegHv" />
+>>>>>>> develop
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,10 +58,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+=======
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/HelloWorld" />
+>>>>>>> develop
   </component>
   <component name="RunManager">
     <configuration name="AnalyticsCounter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -68,6 +91,24 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="c0d1f56f-c7e0-43bf-bf89-414f49e0684c" name="Default Changelist" comment="" />
+      <created>1616493865320</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616493865320</updated>
+      <workItem from="1616493872076" duration="3468000" />
+      <workItem from="1616514376593" duration="669000" />
+    </task>
+    <task id="LOCAL-00001" summary="Utilisation d'une Map (TreeMap) pour remettre en ordre alphabétique les données et les écrire dans le fichier result.out">
+      <created>1616496865418</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616496865418</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+=======
       <changelist id="f3300947-c6bc-4fa7-8ba4-cbce61f0ba1b" name="Default Changelist" comment="" />
       <created>1616161781692</created>
       <option name="number" value="Default" />
@@ -127,6 +168,7 @@
       <updated>1616489996450</updated>
     </task>
     <option name="localTasksCounter" value="6" />
+>>>>>>> develop
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,11 +187,16 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
+    <MESSAGE value="Utilisation d'une Map (TreeMap) pour remettre en ordre alphabétique les données et les écrire dans le fichier result.out" />
+    <option name="LAST_COMMIT_MESSAGE" value="Utilisation d'une Map (TreeMap) pour remettre en ordre alphabétique les données et les écrire dans le fichier result.out" />
+=======
     <MESSAGE value="Retrait du code inutile et meilleure initialisation de la variable count" />
     <MESSAGE value="Classement par ordre alphabétique des résultats dans result.out" />
     <MESSAGE value="Création de la classe SymptomCount et transfert de la méthode symptomCount pour clarifier la méthode main dans AnalyticsCounter" />
     <MESSAGE value="Ajout de la JavaDocs" />
     <MESSAGE value="Ajout des fichiers xml" />
     <option name="LAST_COMMIT_MESSAGE" value="Ajout des fichiers xml" />
+>>>>>>> develop
   </component>
 </project>
