@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="c0d1f56f-c7e0-43bf-bf89-414f49e0684c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_03_2021_10_06__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_03_2021_10_06__Default_Changelist_.xml" afterDir="false" />
 =======
@@ -9,6 +10,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 >>>>>>> develop
     </list>
+=======
+    <list default="true" id="f3300947-c6bc-4fa7-8ba4-cbce61f0ba1b" name="Default Changelist" comment="Ajout des fichiers xml" />
+>>>>>>> develop
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,6 +128,8 @@
       <workItem from="1616489630003" duration="413000" />
       <workItem from="1616493620984" duration="75000" />
       <workItem from="1616580913045" duration="1713000" />
+      <workItem from="1616598618363" duration="17000" />
+      <workItem from="1616665349464" duration="286000" />
     </task>
     <task id="LOCAL-00001" summary="Retrait du code inutile et meilleure initialisation de la variable count">
       <created>1616422506162</created>
