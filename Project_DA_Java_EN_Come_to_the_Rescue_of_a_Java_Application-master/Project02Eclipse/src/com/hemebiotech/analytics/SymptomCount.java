@@ -19,8 +19,6 @@ public class SymptomCount {
         try{
             int count;
             String mapKey;
-
-            ArrayList<String> alreadyCount = new ArrayList<>();
             Map<String, Integer> symptomCount = new TreeMap<>();
             /*
               Initialize the file where we're going to put our result data
@@ -38,11 +36,10 @@ public class SymptomCount {
                 /*
                   Verify if the symptom haven't been already check
                  */
-                if (!(alreadyCount.contains(listSymptom.GetSymptoms().get(i)))){
+                if (!(symptomCount.containsKey(listSymptom.GetSymptoms().get(i)))){
                     /*
                       add the symptom if it's not check
                      */
-                    alreadyCount.add(listSymptom.GetSymptoms().get(i));
                     mapKey = listSymptom.GetSymptoms().get(i);
 
                     count=0;
@@ -50,7 +47,7 @@ public class SymptomCount {
                       Checking how many times the symptom is in the file
                      */
                     for (int j=0;j<listSymptom.GetSymptoms().size();j++){
-                        if (listSymptom.GetSymptoms().get(j).equals(listSymptom.GetSymptoms().get(i))){
+                        if (listSymptom.GetSymptoms().get(j).equals(mapKey)){
                             count++;
                         }
                     }
