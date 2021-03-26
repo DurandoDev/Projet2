@@ -2,12 +2,11 @@ package com.hemebiotech.analytics;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Count the symptoms occurrence and place them into result.out
+ * counting and sorting each symptom from a list of symptoms into result.out
  */
 public class SymptomCount {
     /**
@@ -17,8 +16,7 @@ public class SymptomCount {
      */
     public void symptomCount(String source,String destination) throws IOException {
 
-            int count;
-            String mapKey;
+            String symptom;
             Map<String, Integer> symptomCount = new TreeMap<>();
             /*
               Initialize the file where we're going to put our result data
@@ -32,25 +30,20 @@ public class SymptomCount {
             ISymptomReader listSymptom = new ReadSymptomDataFromFile(source);
 
             for (int i=0;i<listSymptom.GetSymptoms().size();i++){
+
+                symptom = listSymptom.GetSymptoms().get(i);
+
                 /*
                   Verify if the symptom haven't been already check
                  */
-                if (!(symptomCount.containsKey(listSymptom.GetSymptoms().get(i)))){
+                if ((symptomCount.containsKey(listSymptom.GetSymptoms().get(i)))){
                     /*
-                      add the symptom if it's not check
+                      increment the count for the key associated
                      */
-                    mapKey = listSymptom.GetSymptoms().get(i);
 
-                    count=0;
-                    /*
-                      Checking how many times the symptom is in the file
-                     */
-                    for (int j=0;j<listSymptom.GetSymptoms().size();j++){
-                        if (listSymptom.GetSymptoms().get(j).equals(mapKey)){
-                            count++;
-                        }
-                    }
-                    symptomCount.put(mapKey, count);
+                    symptomCount.put(symptom,symptomCount.get(symptom)+1);
+                }else {
+                    symptomCount.put(symptom,1);
                 }
             }
             /*

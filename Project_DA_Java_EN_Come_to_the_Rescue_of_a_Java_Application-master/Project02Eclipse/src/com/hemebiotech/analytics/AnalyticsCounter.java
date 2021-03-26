@@ -3,7 +3,7 @@ package com.hemebiotech.analytics;
 import java.io.IOException;
 
 /**
- * The main class : counting and sorting each symptom from a list of symptoms into result.out
+ * The main class : Apply the method in class SymptomCount to count and sort the symptoms
  * @author Nathan D
  * @version 1.0
  */
