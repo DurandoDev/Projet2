@@ -15,8 +15,8 @@ public class SymptomCount {
      * @param source file to read
      * @param destination file to write in
      */
-    public static void symptomCount(String source,String destination) {
-        try{
+    public void symptomCount(String source,String destination) throws IOException {
+
             int count;
             String mapKey;
             Map<String, Integer> symptomCount = new TreeMap<>();
@@ -29,7 +29,7 @@ public class SymptomCount {
               Create a list from the file specified in parameter
               @see ReadSymptomDataFromFile
              */
-            ReadSymptomDataFromFile listSymptom = new ReadSymptomDataFromFile(source);
+            ISymptomReader listSymptom = new ReadSymptomDataFromFile(source);
 
             for (int i=0;i<listSymptom.GetSymptoms().size();i++){
                 /*
@@ -62,9 +62,5 @@ public class SymptomCount {
                 writer.write(key+": "+value+"\n");
             }
             writer.close();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-
     }
 }
