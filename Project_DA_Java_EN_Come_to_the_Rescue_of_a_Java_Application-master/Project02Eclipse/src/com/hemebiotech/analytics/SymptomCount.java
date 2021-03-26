@@ -36,11 +36,10 @@ public class SymptomCount {
                 /*
                   Verify if the symptom haven't been already check
                  */
-                if ((symptomCount.containsKey(listSymptom.GetSymptoms().get(i)))){
+                if ((symptomCount.containsKey(symptom))){
                     /*
                       increment the count for the key associated
                      */
-
                     symptomCount.put(symptom,symptomCount.get(symptom)+1);
                 }else {
                     symptomCount.put(symptom,1);
