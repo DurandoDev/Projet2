@@ -28,7 +28,7 @@ public class SymptomCount {
               Create a list from the file specified in parameter
               @see ReadSymptomDataFromFile
              */
-            ISymptomReader listSymptom = new ReadSymptomDataFromFile(source);
+            ReadSymptomDataFromFile listSymptom = new ReadSymptomDataFromFile(source);
 
             for (int i = 0; i < listSymptom.GetSymptoms().size(); i++) {
 
